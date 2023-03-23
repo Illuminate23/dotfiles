@@ -1,6 +1,6 @@
 # dotfiles
 WM: i3-gaps <br>
-Terminal: Kitty
-Text-editor: Vim
-Composer: Picom
-Distro: Arch
+Terminal: Kitty <br>
+Text-editor: Vim <br>
+Composer: Picom <br>
+Distro: Arch <br>
