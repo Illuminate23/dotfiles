@@ -1,5 +1,5 @@
 # dotfiles
-<span style="font-family: 'JetBrains Mono Medium'">WM: i3-gaps</span> <br>
+WM: i3-gaps <br>
 Terminal: Kitty <br>
 Text-editor: Vim <br>
 Composer: Picom <br>
