@@ -48,7 +48,7 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id rofi -show run -font "JetBrains Mono Medium 14"
 bindsym $mod+d exec rofi -show run -font "JetBrainsMonoNL NFM Bold 14" 
-#bindsym $mod+d exec rofi -show run -font "UbuntuMono Nerd Font Mono Bold 16" 
+#bindsym $mod+d exec rofi -show run -font "UbuntuMono Nerd Font Mono Bold 14" 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -181,27 +181,29 @@ bindsym $mod+r mode "resize"
 gaps inner 10
 for_window [class="^.*"] border pixel 2
 exec --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle'
-exec --no-startup-id feh --bg-scale ~/walls/wall2.jpg
+exec --no-startup-id feh --bg-scale ~/Downloads/pine2.png
 #exec --no-startup-id xsetroot -solid "#31748f" 
 exec --no-startup-id polybar -r main
 exec --no-startup-id picom --config=/home/vladimirpc/.config/picom.conf --experimental-backends --daemon
 exec --no-startup-id timedatectl set-ntp true
+exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
+exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
 
-
-bindsym $mod+Insert exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+#bindsym $mod+Insert exec --no-startup-id maim --select | xclip -selection clipboard -t image/png | tee ~/Pictures/screenshot.png
+bindsym $mod+Insert exec --no-startup-id maim --select | tee ~/Pictures/screenshot.png | xclip -selection clipboard -t image/png 
 bindsym $mod+Shift+Insert exec import -window root ~/Pictures/ss.png
 
 set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color4 #f0f0f0
-set_from_resource $d_bg i3wm.color4 #f0f0f0
+set_from_resource $bg i3wm.color1 #f0f0f0
+set_from_resource $d_bg i3wm.color3 #f0f0f0
 
 #bindsym $mod+d exec dmenu_run -nb "$d_bg" -nf "$fg" -sb "$bg" -sf "$fg" -fn "CozetteHiDpi:pixelsize=22" 
 
 # class                 border  backgr. text indicator child_border
-client.focused          #31748f $d_bg     $fg  $d_bg   #31748f
+client.focused          #31748f $bg     $fg  $bg       #31748f 
 client.focused_inactive #31748f $bg     $fg  $bg       #31748f
-client.unfocused        #31748f $bg     $fg  $bg       #31748f
-client.urgent           #31748f $bg     $fg  $bg       #31748f
-client.placeholder      #31748f $bg     $fg  $bg       #31748f
+client.unfocused        #31748f $bg     $fg  $bg       #31748f 
+client.urgent           #31748f $bg     $fg  $bg       #31748f 
+client.placeholder      #31748f $bg     $fg  $bg       #31748f 
 
 client.background       $bg
