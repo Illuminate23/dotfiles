@@ -181,7 +181,7 @@ bindsym $mod+r mode "resize"
 gaps inner 10
 for_window [class="^.*"] border pixel 2
 exec --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle'
-exec --no-startup-id feh --bg-scale ~/Downloads/pine2.png
+exec --no-startup-id feh --bg-scale ~/Downloads/gruv_table.png
 #exec --no-startup-id xsetroot -solid "#31748f" 
 exec --no-startup-id polybar -r main
 exec --no-startup-id picom --config=/home/vladimirpc/.config/picom.conf --experimental-backends --daemon
