@@ -181,17 +181,14 @@ bindsym $mod+r mode "resize"
 gaps inner 10
 for_window [class="^.*"] border pixel 2
 exec --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle'
-exec --no-startup-id feh --bg-scale ~/Downloads/gruv_table.png
+exec --no-startup-id feh --bg-scale ~/Downloads/pink1.png
 #exec --no-startup-id xsetroot -solid "#31748f" 
 exec --no-startup-id polybar -r main
-exec --no-startup-id picom --config=/home/vladimirpc/.config/picom.conf --experimental-backends --daemon
-exec --no-startup-id timedatectl set-ntp true
-exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
-exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
+exec --no-startup-id picom --config=/home/vladimirpc/.config/picom.conf --daemon
 
 #bindsym $mod+Insert exec --no-startup-id maim --select | xclip -selection clipboard -t image/png | tee ~/Pictures/screenshot.png
-bindsym $mod+Insert exec --no-startup-id maim --select | tee ~/Pictures/screenshot.png | xclip -selection clipboard -t image/png 
-bindsym $mod+Shift+Insert exec import -window root ~/Pictures/ss.png
+bindsym $mod+o exec --no-startup-id maim --select | tee ~/Pictures/screenshot.png | xclip -selection clipboard -t image/png 
+bindsym $mod+Shift+o exec import -window root ~/Pictures/ss.png
 
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color1 #f0f0f0
@@ -200,10 +197,10 @@ set_from_resource $d_bg i3wm.color3 #f0f0f0
 #bindsym $mod+d exec dmenu_run -nb "$d_bg" -nf "$fg" -sb "$bg" -sf "$fg" -fn "CozetteHiDpi:pixelsize=22" 
 
 # class                 border  backgr. text indicator child_border
-client.focused          #31748f $bg     $fg  $bg       #31748f 
-client.focused_inactive #31748f $bg     $fg  $bg       #31748f
-client.unfocused        #31748f $bg     $fg  $bg       #31748f 
-client.urgent           #31748f $bg     $fg  $bg       #31748f 
-client.placeholder      #31748f $bg     $fg  $bg       #31748f 
+client.focused          #8897F4 $bg     $fg  #8897F4   #8897F4
+client.focused_inactive #8897F4 $bg     $fg  #8897F4   #8897F4
+client.unfocused        #8897F4 $bg     $fg  #8897F4   #8897F4
+client.urgent           #8897F4 $bg     $fg  #8897F4   #8897F4
+client.placeholder      #8897F4 $bg     $fg  #8897F4   #8897F4
 
 client.background       $bg
